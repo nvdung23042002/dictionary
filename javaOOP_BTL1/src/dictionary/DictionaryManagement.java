@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class DictionaryManagement {
 	public static Scanner sc = new Scanner(System.in);
-	public static final String url = "F:\\projectJavaOOP\\dictionary\\dung\\src\\dictionaries.txt";
+	public static final String url = "F:\\projectJavaOOP\\dictionary\\javaOOP_BTL1\\src\\dictionary\\dictionaries.txt";
 	void insertFromCommandline() {
         int n;
         n = sc.nextInt();
@@ -52,6 +54,28 @@ public class DictionaryManagement {
             }
         }
 	}
+	
+	/**
+     * write 1 word consist of meaning english and vietnamese to dictionary.
+     * 
+     * @param s is string from output
+     */
+    public static void writeToFile(String s) {
+        try {
+            // Creates a FileWriter
+            FileWriter writer = new FileWriter(url, true); // second param(true) means append;
+            // Creates a BufferedWriter
+            BufferedWriter buffer = new BufferedWriter(writer);
+            // Writes the string to the file
+            buffer.write("\n");
+            buffer.write(s);
+            // Closes the writer
+            buffer.close();
+        } catch (Exception e) {
+            e.getStackTrace();
+        }
+    }
+    
 	/*
     public static void deleteWord(Word removeWord) {
         for(Word i : data) {

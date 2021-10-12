@@ -5,3 +5,4 @@ cat	con meo
 basic	co ban
 advice	thiet bi
 mouse	chuot
+latop    may xach tay
