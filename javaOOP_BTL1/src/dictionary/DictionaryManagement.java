@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class DictionaryManagement {
 	public static Scanner sc = new Scanner(System.in);
-
+	public static final String url = "F:\\projectJavaOOP\\dictionary\\dung\\src\\dictionaries.txt";
 	void insertFromCommandline() {
         int n;
         n = sc.nextInt();
@@ -26,7 +26,7 @@ public class DictionaryManagement {
 	public static void insertFromFile() {
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader("C:\\Users\\hscng\\eclipse-workspace\\dung\\src\\dictionary\\dictionaries.txt"));
+			br = new BufferedReader(new FileReader(url));
             String content = br.readLine();
             while (content != null) {
                 // split string with tab
