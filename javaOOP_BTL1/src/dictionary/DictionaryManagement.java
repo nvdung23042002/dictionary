@@ -52,11 +52,22 @@ public class DictionaryManagement {
             }
         }
 	}
+	/*
+    public static void deleteWord(Word removeWord) {
+        for(Word i : data) {
+            if(i.word_explain.equals(removeWord.word_explain) == true && i.word_target.equals(removeWord.word_target) == true) {
+                data.remove(removeWord);
+            }
+        }
+    }
+    */
+
 	
 
 	public static void main(String[] args) {       
 		DictionaryCommandLine ver2 = new DictionaryCommandLine();
 		ver2.dictionaryAdvance();
 		ver2.dictionarySearcher();
+
     }
 }
