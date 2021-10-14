@@ -3,6 +3,7 @@ package dictionary;
 import java.util.ArrayList;
 
 public class DictionaryCommandLine {
+	static String[] dung;
 	static void showAllWords() {
         System.out.println("NO     |English     |Vietnamese");
         int num = 0;
